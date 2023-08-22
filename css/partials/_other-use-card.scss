@@ -1,0 +1,111 @@
+#techpagecontents {
+    .other-use-container {
+        &:hover {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .other-use-item {
+        h4 {
+            color: $darkBlue;
+            font-size: 24px;
+            line-height: 2.5rem;
+            margin: 0;
+            padding-top: 90px;
+        }
+
+        p {
+            font-weight: 400;
+            margin: .8rem auto;
+        }
+
+        span {
+            margin-top: 1rem;
+        }
+
+        &:hover {
+            h4 {
+                padding-top: 8px;
+            }
+        }
+    }
+
+    .other-use-long {
+        p {
+            margin: .5rem auto;
+        }
+    
+        h4 {
+            padding-top: 66px;
+        }
+    
+        span {
+            margin-top: .6rem;
+        }
+    }
+}
+
+.other-use-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.other-use-item {
+    margin-top: 2rem;
+    text-align: center;
+    display: block;
+    position: relative;
+
+    width: 48%;
+    height: 220px;
+    background: #fff;
+    border: 3px solid $darkBlue;
+
+    h4 {
+        transition: padding-top .3s ease-out;
+    }
+
+    p {
+        width: 95%;
+        opacity: 0;
+        position: absolute;
+        left: -10000px;
+    }
+
+    span {
+        display: block;
+        color: $green;
+        font-weight: 600;
+    }
+
+    
+    &:hover {
+        h4 {
+            transition: padding-top .3s ease-out;
+        }
+    
+        p {
+            position: static;
+            opacity: 1;
+            transition: opacity .3s ease-in;
+            transition-delay: .1s;
+        }
+    
+        .fa-angle-up {
+            bottom: 120px;
+            opacity: 0;
+            transition: bottom .3s, opacity .3s;
+        }
+    }
+}
+
+.fa-angle-up {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 12px);
+    font-size: 3rem;
+    color: $darkBlue;
+    transition: bottom .3s, opacity .3s;
+}
